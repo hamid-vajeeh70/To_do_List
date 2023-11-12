@@ -26,8 +26,6 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-
-/* Style for the delete button */
 .delete-button {
     background-color: #ff6464;
     color: #fff;
@@ -36,12 +34,27 @@ ul {
     margin-left: 5px;
     cursor: pointer;
 }
-
-/* Style for the ad container */
 .ad-container {
     margin-top: 20px;
     border: 1px solid #ccc;
     padding: 10px;
-    max-width: 300px;
+    max-width: 400px;
+    background-color: #333;
+    display: flex;
 }
-/*<p>Ad goes here</p>/*
+
+li {
+    margin-bottom: 8px;
+}
+
+.ad{
+    text-align: center;
+    color: #16FF00;
+    background-color: #333;
+   }
+.ad p{
+    color: #16FF00;
+}
+.mail{
+    font-size: 25px;
+}
