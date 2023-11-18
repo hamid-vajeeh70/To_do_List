@@ -1,11 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Disable reload on scroll
-    document.addEventListener("scroll", function (e) {
-        e.preventDefault();
-        window.scrollTo(0, 0);
-    });
+    // Load tasks from localStorage when the page loads
+    loadTasks();
 });
-
 
 function addTask() {
     var taskInput = document.getElementById("taskInput");
@@ -14,7 +10,6 @@ function addTask() {
     if (taskInput.value.trim() !== "") {
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(taskInput.value));
-
 
         // Add a delete button to each task
         var deleteButton = document.createElement("button");
@@ -77,4 +72,3 @@ function loadTasks() {
         taskList.appendChild(li);
     });
 }
-
