@@ -10,19 +10,30 @@ body {
     color: #2c3e50;
 }
 
-
 .container {
     text-align: center;
     background-color: #ecf0f1;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 80%;
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+/* Style for the search bar and "Add" button */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 input {
+    flex: 1;
     padding: 10px;
     margin-bottom: 10px;
-    width: 60%;
     border: 1px solid #bdc3c7;
     border-radius: 5px;
 }
@@ -34,6 +45,7 @@ button {
     color: #fff;
     border: none;
     border-radius: 5px;
+    margin-left: 5px; /* Add some margin between input and button */
 }
 
 ul {
@@ -42,25 +54,44 @@ ul {
     margin: 0;
 }
 
-/* Style for the delete button */
 .delete-button {
     background-color: #e74c3c;
     color: #fff;
     border: none;
     padding: 5px 8px;
-    margin-left: 5px;
     cursor: pointer;
 }
 
-/* Style for the ad container */
 .ad-container {
-    margin-top: 50px;
+    margin-top: 20px;
     border: 1px solid #ccc;
     padding: 10px;
     max-width: 300px;
 }
+/* Existing CSS styles */
 
-/* Style for spacing between to-do list items */
+.button-group {
+    margin-top: 10px;
+}
+
+.button-group button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.button-group {
+    margin-top: 20px; /* Adjust the margin as needed */
+    position: relative;
+    bottom: 0;
+}
+
+/* Existing CSS styles */
+
+
 li {
     margin-bottom: 8px;
     background-color: #fff;
@@ -69,8 +100,6 @@ li {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Responsive Styles */
 @media only screen and (min-width: 768px) {
     .container {
         width: 60%;
@@ -84,14 +113,42 @@ li {
 }
 
 
-.ad{
+/* Existing CSS styles */
+/* Existing CSS styles */
+
+/* Existing CSS styles */
+
+.logo {
+    max-width: 200px; /* Set the maximum width for your logo */
+    height: auto;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    border-radius: 50%;
+}
+
+.ad {
     text-align: center;
     color: #16FF00;
     background-color: #333;
-   }
-.ad p{
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.ad p {
     color: #16FF00;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
-.mail{
+
+.mail {
     font-size: 20px;
+    margin-bottom: 15px;
 }
+
+address {
+    font-style: italic;
+    color: #fff;
+}
+
+/* Existing CSS styles */
+
