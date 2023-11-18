@@ -10,8 +10,7 @@ function addTask() {
     if (taskInput.value.trim() !== "") {
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(taskInput.value));
-        taskList.appendChild(li);
-        taskInput.value = "";
+
 
         // Add a delete button to each task
         var deleteButton = document.createElement("button");
@@ -23,14 +22,25 @@ function addTask() {
         };
         li.appendChild(deleteButton);
 
+        // Insert new task at the beginning of the list
+        taskList.insertBefore(li, taskList.firstChild);
+
+        taskInput.value = "";
         saveTasks(); // Save tasks after addition
     }
 }
+
 
 function checkEnter(event) {
     if (event.key === "Enter") {
         addTask();
     }
+}
+
+function deleteAllTasks() {
+    var taskList = document.getElementById("taskList");
+    taskList.innerHTML = ""; // Remove all tasks from the list
+    saveTasks(); // Save tasks after deletion
 }
 
 // Save tasks to localStorage
@@ -63,3 +73,5 @@ function loadTasks() {
         taskList.appendChild(li);
     });
 }
+
+
