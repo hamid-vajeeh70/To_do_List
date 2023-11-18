@@ -1,7 +1,11 @@
-// Load tasks from localStorage when the page loads
 document.addEventListener("DOMContentLoaded", function () {
-    loadTasks();
+    // Disable reload on scroll
+    document.addEventListener("scroll", function (e) {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+    });
 });
+
 
 function addTask() {
     var taskInput = document.getElementById("taskInput");
@@ -73,5 +77,4 @@ function loadTasks() {
         taskList.appendChild(li);
     });
 }
-
 
